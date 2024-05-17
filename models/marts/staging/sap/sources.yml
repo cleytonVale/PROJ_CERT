@@ -1,0 +1,135 @@
+version: 2
+
+sources:
+  - name: sap
+    description: "Fonte do ERP da Adventure Works"
+    database: equatorial
+    schema: SAP_ADW
+    tables:
+      - name: Product
+        columns:
+          - name: PRODUCTID
+            description: "Identificador único do produto."
+            tests:
+              - unique
+              - not_null
+          - name: NAME
+            description: "Nome do produto."
+            tests:
+              - not_null
+      - name: Customer
+        columns:
+          - name: CUSTOMERID
+            description: "Identificador único do cliente."
+            tests:
+              - unique
+              - not_null
+      - name: SalesReason
+        columns:
+          - name: SALESREASONID
+            description: "Identificador único do motivo de venda."
+            tests:
+              - unique
+              - not_null
+      - name: SalesPerson
+        columns:
+          - name: SALESPERSONID
+            description: "Identificador único do vendedor."
+            tests:
+              - unique
+              - not_null
+      - name: Employee
+        columns:
+          - name: EMPLOYEEID
+            description: "Identificador único do empregado."
+            tests:
+              - unique
+              - not_null
+      - name: Person
+        columns:
+          - name: PERSONID
+            description: "Identificador único da pessoa."
+            tests:
+              - unique
+              - not_null
+      - name: StateProvince
+        columns:
+          - name: STATEPROVINCEID
+            description: "Identificador único do estado/província."
+            tests:
+              - unique
+              - not_null
+      - name: Address
+        columns:
+          - name: ADDRESSID
+            description: "Identificador único do endereço."
+            tests:
+              - unique
+              - not_null
+          - name: ADDRESSLINE1
+            description: "Linha 1 do endereço."
+            tests:
+              - not_null
+      - name: CountryRegion
+        columns:
+          - name: COUNTRYREGIONID
+            description: "Identificador único do país/região."
+            tests:
+              - unique
+              - not_null
+          - name: NAME
+            description: "Nome do país/região."
+            tests:
+              - not_null
+      - name: Salesorderheader
+        columns:
+          - name: SALESORDERID
+            description: "Identificador único do pedido de venda."
+            tests:
+              - unique
+              - not_null
+          - name: CUSTOMERID
+            description: "Identificador único do cliente."
+            tests:
+              - not_null
+          - name: ORDERDATE
+            description: "Data do pedido."
+            tests:
+              - not_null
+        tests:
+          - testes_vendas_brutas_2011
+      - name: SalesOrderDetail
+        columns:
+          - name: SALESORDERID
+            description: "Identificador único do pedido de venda."
+            tests:
+              - not_null
+          - name: PRODUCTID
+            description: "Identificador único do produto."
+            tests:
+              - not_null
+          - name: ORDERQTY
+            description: "Quantidade de itens pedidos."
+            tests:
+              - not_null
+      - name: CreditCard
+        columns:
+          - name: CREDITCARDID
+            description: "Identificador único do cartão de crédito."
+            tests:
+              - unique
+              - not_null
+          - name: CARDNUMBER
+            description: "Número do cartão de crédito."
+            tests:
+              - not_null
+      - name: SalesOrderHeaderSalesReason
+        columns:
+          - name: SALESORDERID
+            description: "Identificador único do pedido de venda."
+            tests:
+              - not_null
+          - name: SALESREASONID
+            description: "Identificador único do motivo da venda."
+            tests:
+              - not_null

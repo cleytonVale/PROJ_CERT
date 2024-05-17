@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: motivos_vendas
+    description: "Modelo que seleciona dados dos motivos das vendas da tabela stg_sap__motivos_vendas."
+    columns:
+      - name: pk_motivo_venda
+        description: "Chave primária do motivo da venda"
+      - name: data_modificacao_venda
+        description: "Data da modificação do motivo da venda"
+      - name: descr_motivo_venda
+        description: "Descrição do motivo da venda"
+      - name: tipo_motivo_venda
+        description: "Tipo do motivo da venda"

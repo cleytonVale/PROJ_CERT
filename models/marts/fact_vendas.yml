@@ -1,0 +1,97 @@
+version: 2
+
+models:
+  - name: fact_vendas
+    description: "Tabela de fato que consolida todas as vendas, unindo informações de clientes, localidade, produtos, status de vendas, e tipos de cartões."
+    columns:
+      - name: id_venda
+        description: "Identificador único da venda."
+        tests:
+          - unique
+          - not_null
+      - name: id_cliente
+        description: "Chave estrangeira para a dimensão clientes."
+        tests:
+          - not_null
+      - name: id_pessoa
+        description: "Chave estrangeira para a dimensão pessoas."
+      - name: id_cartao
+        description: "Chave estrangeira para a dimensão tipos de cartões."
+      - name: data_abertura_pedido
+        description: "Data de abertura do pedido."
+      - name: status_pedido
+        description: "Status do pedido de venda."
+      - name: id_produto
+        description: "Chave estrangeira para a dimensão produtos."
+        tests:
+          - not_null
+      - name: qtd_item_vendido
+        description: "Quantidade de itens vendidos."
+      - name: preco_unitario
+        description: "Preço unitário do produto."
+      - name: desconto_por_preco_unitario
+        description: "Desconto aplicado por unidade do produto."
+      - name: frete
+        description: "Valor do frete associado ao pedido."
+      - name: plataforma_pedido
+        description: "Plataforma através da qual o pedido foi realizado."
+      - name: subtotal
+        description: "Subtotal do pedido."
+      - name: imposto
+        description: "Valor do imposto aplicado ao pedido."
+      - name: Total_devido_cliente
+        description: "Valor total devido pelo cliente."
+      - name: id_motivo_venda
+        description: "Chave estrangeira para a dimensão motivos de vendas."
+      - name: nome_cliente
+        description: "Nome do cliente."
+      - name: sobrenome_cliente
+        description: "Sobrenome do cliente."
+      - name: tipo_pessoa_cliente
+        description: "Tipo de pessoa (física ou jurídica)."
+      - name: localidade_id
+        description: "Identificador único da localidade."
+      - name: endereco
+        description: "Endereço associado à localidade."
+      - name: cidade
+        description: "Nome da cidade."
+      - name: cod_estado
+        description: "Código do estado."
+      - name: nm_estado
+        description: "Nome do estado."
+      - name: nm_pais
+        description: "Nome do país."
+      - name: nm_produto
+        description: "Nome do produto."
+      - name: cod_identificacao_produto
+        description: "Código de identificação do produto."
+      - name: cor_produto
+        description: "Cor do produto."
+      - name: dias_para_fabricacao
+        description: "Quantidade de dias necessários para a fabricação do produto."
+      - name: data_descontinuacao
+        description: "Data de descontinuação do produto."
+      - name: preco_de_venda
+        description: "Preço de venda do produto."
+      - name: tipo_nome_cartao
+        description: "Nome do tipo de cartão."
+      - name: descr_motivo_venda
+        description: "Descrição do motivo da venda."
+      - name: descr_status_pedido
+        description: "Descrição do status do pedido."
+      - name: numero_pedidos
+        description: "Número de pedidos."
+        tests:
+          - not_null
+      - name: quantidade_comprada
+        description: "Quantidade de itens comprados."
+        tests:
+          - not_null
+      - name: valor_total_negociado
+        description: "Valor total das vendas negociado."
+        tests:
+          - not_null
+      - name: valor_total_negociado_liquido
+        description: "Valor total das vendas negociado líquido."
+        tests:
+          - not_null
