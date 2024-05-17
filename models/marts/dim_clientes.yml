@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: dim_clientes
+    description: "Dimensão que contém informações sobre os clientes, incluindo detalhes pessoais e territórios associados."
+    columns:
+      - name: pk_cliente
+        description: "Identificador único do cliente."
+        tests:
+          - unique
+          - not_null
+      - name: nome
+        description: "Primeiro nome do cliente."
+      - name: sobrenome
+        description: "Sobrenome do cliente."
+      - name: tipo_pessoa
+        description: "Tipo de pessoa (física ou jurídica)."
+      - name: fk_cod_territorio
+        description: "Código do território associado ao cliente."

@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: dim_localidade
+    description: "Modelo que seleciona dados de localização das tabelas de cidade, estado e país."
+    columns:
+      - name: pk_cidade
+        description: "Chave primária da cidade"
+      - name: endereco
+        description: "Endereço na cidade"
+      - name: cidade
+        description: "Nome da cidade"
+      - name: fk_estado
+        description: "Chave estrangeira do estado"
+      - name: cod_postal
+        description: "Código postal da cidade"

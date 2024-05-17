@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: dim_localidade_estado
+    description: "Modelo que seleciona dados de localização das tabelas de estado e país."
+    columns:
+      - name: pk_estado
+        description: "Chave primária do estado"
+      - name: nm_estado
+        description: "Nome do estado"
+      - name: cod_estado
+        description: "Código do estado"
+      - name: fk_pais
+        description: "Chave estrangeira do país"
+      - name: cod_territorio
+        description: "Código do território ao qual o estado pertence"

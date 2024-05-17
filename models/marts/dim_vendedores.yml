@@ -1,0 +1,36 @@
+version: 2
+
+models:
+  - name: dim_vendedores
+    description: "Modelo que seleciona e une dados dos vendedores, funcionários e pessoas das tabelas stg_sap__vendedores, stg_sap__funcionarios e stg_sap__pessoas."
+    columns:
+      - name: pk_vendedor
+        description: "Chave primária do vendedor"
+      - name: fk_cod_territorio
+        description: "Código do território ao qual o vendedor pertence"
+      - name: projecao_anual_venda
+        description: "Projeção anual de vendas do vendedor"
+      - name: bonus_cotas
+        description: "Bônus por atingir cotas"
+      - name: comissao_percentual_mensal
+        description: "Percentual de comissão mensal"
+      - name: total_venda_anualizado
+        description: "Total de vendas anualizado"
+      - name: total_venda_ano_ant
+        description: "Total de vendas do ano anterior"
+      - name: niver_funcionario
+        description: "Data de aniversário do funcionário"
+      - name: ativado
+        description: "Status de ativação do funcionário"
+      - name: genero
+        description: "Gênero do funcionário"
+      - name: data_contratacao
+        description: "Data de contratação do funcionário"
+      - name: cargo
+        description: "Cargo do funcionário"
+      - name: nome
+        description: "Nome da pessoa"
+      - name: sobrenome
+        description: "Sobrenome da pessoa"
+      - name: tipo_pessoa
+        description: "Tipo da pessoa (física ou jurídica)"

@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: dim_produto
+    description: "Dimensão que contém informações sobre os produtos, incluindo detalhes como nome, código de identificação, cor, dias para fabricação, data de descontinuação e preço de venda."
+    columns:
+      - name: pk_produto
+        description: "Identificador único do produto."
+        tests:
+          - unique
+          - not_null
+      - name: nm_produto
+        description: "Nome do produto."
+      - name: cod_identificacao_produto
+        description: "Código de identificação do produto."
+      - name: cor_produto
+        description: "Cor do produto."
+      - name: dias_para_fabricacao
+        description: "Quantidade de dias necessários para a fabricação do produto."
+      - name: data_descontinuacao
+        description: "Data de descontinuação do produto."
+      - name: preco_de_venda
+        description: "Preço de venda do produto."

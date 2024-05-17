@@ -1,0 +1,32 @@
+version: 2
+
+models:
+  - name: dados_vendas
+    description: "Modelo que seleciona dados de vendas da tabela stg_sap__header_pedido_vendas e realiza as transformações necessárias."
+    columns:
+      - name: data_da_venda
+        description: "Data da venda"
+      - name: pk_header_pedido_venda
+        description: "Chave primária do cabeçalho do pedido de venda"
+      - name: obs_venda
+        description: "Observações da venda"
+      - name: fk_cartao_credito
+        description: "Chave estrangeira do cartão de crédito utilizado na venda"
+      - name: pk_venda
+        description: "Chave primária da venda"
+      - name: frete
+        description: "Custo do frete"
+      - name: plataforma_pedido
+        description: "Plataforma onde o pedido foi realizado"
+      - name: fk_pessoa
+        description: "Chave estrangeira da pessoa que realizou a compra"
+      - name: Status_Pedido_venda
+        description: "Status do pedido de venda"
+      - name: subtotal
+        description: "Subtotal da venda"
+      - name: imposto
+        description: "Valor do imposto da venda"
+      - name: Total_devido_cliente
+        description: "Valor total devido pelo cliente"
+      - name: fk_cod_endereco
+        description: "Chave estrangeira do código do endereço"

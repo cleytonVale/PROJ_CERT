@@ -1,0 +1,10 @@
+version: 2
+
+models:
+  - name: dim_localidade_pais
+    description: "Modelo que seleciona dados de localização da tabela de país."
+    columns:
+      - name: pk_pais
+        description: "Chave primária do país"
+      - name: nm_pais
+        description: "Nome do país"
